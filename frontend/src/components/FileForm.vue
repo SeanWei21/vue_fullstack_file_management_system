@@ -34,7 +34,7 @@ export default {
             const formData = new FormData()
             formData.append('file', this.file)
 
-            axios.post('http://localhost:3000/upload', formData)
+            axios.post(import.meta.env.VITE_SERVER_URI + '/upload', formData)
                 .then(response => {
                     // Handle the response Successful
                     console.log(response.data)

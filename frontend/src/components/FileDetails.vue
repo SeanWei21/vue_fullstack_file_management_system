@@ -58,7 +58,7 @@ export default {
     },
 
     getall() {
-      axios.get('http://localhost:3000/files/')
+      axios.get(import.meta.env.VITE_SERVER_URI + '/files/')
       .then(response => {
         // Handle the response Successful
         console.log(response.data)
@@ -78,7 +78,7 @@ export default {
         
       } else {
 
-        axios.patch('http://localhost:3000/rename/'+ id + '/' + this.newFileName)
+        axios.patch(import.meta.env.VITE_SERVER_URI + '/rename/'+ id + '/' + this.newFileName)
           .then(response => {
             // Handle the response if necessary
             console.log(response.data)
@@ -100,7 +100,7 @@ export default {
 
     deletion(id) {
 
-      axios.delete('http://localhost:3000/delete/'+ id)
+      axios.delete(import.meta.env.VITE_SERVER_URI + '/delete/'+ id)
         .then(response => {
           // Handle the response if necessary
 
@@ -121,7 +121,7 @@ export default {
 
     download(id, filename) {
 
-      axios.get(`http://localhost:3000/download/`+id, {
+      axios.get(import.meta.env.VITE_SERVER_URI + `/download/`+id, {
           responseType: 'blob' // Important for handling binary data
         })
         .then(response => {
