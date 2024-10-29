@@ -28,3 +28,4 @@ Simple VERN full stack project, a web app that acts as a simple file management 
 
 ## 🔲 Structure<br/>
 
+![overview drawio](https://github.com/user-attachments/assets/eaeec554-afce-4a3b-b006-b80cd08a411c)
